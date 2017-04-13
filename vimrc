@@ -29,7 +29,7 @@ set textwidth=100
 set colorcolumn=+1
 
 " Numbers
-set number
+" set number
 set numberwidth=5
 
 " Autocomplete
@@ -37,15 +37,20 @@ set numberwidth=5
 
 set clipboard=unamedplus
 
-filetype off
-
-syntax enable
-colorscheme monokai
 
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
 
+set relativenumber
+" relatve number setting and toggle
+" if(&relativenumber == 1)
+"  set number
+" else
+"  set relativenumber
+" endif
+
+" nnoremap <C-m> :call NumberToggle()<cr>
 
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
@@ -58,16 +63,34 @@ Plugin 'tpope/vim-rails'
 
 Plugin 'moll/vim-node'
 Plugin 'pangloss/vim-javascript'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'kchmck/vim-coffee-script'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'Valloric/YouCompleteMe'
+
+Plugin 'ngmy/vim-rubocop'
+Plugin 'tpope/vim-bundler'
+Plugin 'tmhedberg/matchit'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'jsx/jsx.vim'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'briancollins/vim-jst'
+Plugin 'tpope/vim-surround'
+Plugin 'mattn/emmet-vim'
 call vundle#end()
+
+filetype off
+
+syntax enable
+colorscheme monokai
 filetype plugin indent on
 
 " scrooloose/nerdtree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
-map <C-n> :NERDTreeToggle<CR>
+map <C-'\'> :NERDTreeToggle<CR>
 "
 "
 " Brief help
