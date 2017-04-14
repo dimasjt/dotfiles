@@ -37,6 +37,15 @@ set numberwidth=5
 
 set clipboard=unamedplus
 
+" Open new split panes to right and bottom, which feels more natural
+set splitbelow
+set splitright
+"
+" Quicker window movement
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
 
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
@@ -79,6 +88,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'briancollins/vim-jst'
 Plugin 'tpope/vim-surround'
 Plugin 'mattn/emmet-vim'
+Plugin 'vim-syntastic/syntastic'
 call vundle#end()
 
 filetype off
@@ -90,7 +100,7 @@ filetype plugin indent on
 " scrooloose/nerdtree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
-map <C-'\'> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
 "
 "
 " Brief help
