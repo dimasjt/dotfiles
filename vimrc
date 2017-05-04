@@ -109,6 +109,9 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-commentary'
+Plugin 'easymotion/vim-easymotion'
 call vundle#end()
 
 filetype off
@@ -130,3 +133,8 @@ autocmd BufEnter * EnableStripWhitespaceOnSave
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tablin#fnamemod = ':t'
 let g:airline#extensions#branch#enabled = 1
+
+" Copy paste
+vnoremap <C-y> "+y
+vnoremap <C-p> "+gP
+nnoremap <C-p> "+gP
