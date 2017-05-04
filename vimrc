@@ -58,14 +58,14 @@ set splitbelow
 set splitright
 "
 " Quicker window movement
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-h> <C-w>h
-nnoremap <C-l> <C-w>l
+nnoremap <C-Down> <C-w>j
+nnoremap <C-Up> <C-w>k
+nnoremap <C-Left> <C-w>h
+nnoremap <C-Right> <C-w>l
 
 " Tab navigation
-nnoremap <C-S-k> :tabnext<CR>
-nnoremap <C-S-j> :tabprevious<CR>
+nnoremap <C-k> :tabnext<CR>
+nnoremap <C-j> :tabprevious<CR>
 
 nnoremap \ :NERDTreeToggle<CR>
 
