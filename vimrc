@@ -10,6 +10,7 @@ set laststatus=2
 set autowrite
 set nocompatible
 set mouse=a
+set cursorline
 
 " softtabs
 set tabstop=2
@@ -56,7 +57,7 @@ set number
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright
-"
+
 " Quicker window movement
 nnoremap <C-Down> <C-w>j
 nnoremap <C-Up> <C-w>k
@@ -95,7 +96,6 @@ Plugin 'ngmy/vim-rubocop'
 Plugin 'tpope/vim-bundler'
 Plugin 'tmhedberg/matchit'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'jsx/jsx.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'briancollins/vim-jst'
 Plugin 'tpope/vim-surround'
@@ -138,3 +138,4 @@ let g:airline#extensions#branch#enabled = 1
 vnoremap <C-y> "+y
 vnoremap <C-p> "+gP
 nnoremap <C-p> "+gP
+
