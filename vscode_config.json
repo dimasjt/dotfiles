@@ -1,0 +1,17 @@
+{
+    "vim.disableAnnoyingNeovimMessage": true,
+    "workbench.colorTheme": "Monokai",
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "vim.useSystemClipboard": true,
+    "ruby.lint": {
+        "rubocop": true,
+        "fasterer": true
+    },
+    "editor.fontFamily": "Source Code Pro for Powerline",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.minimap.enabled": false
+}
