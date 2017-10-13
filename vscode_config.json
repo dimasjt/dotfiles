@@ -8,10 +8,18 @@
         "rubocop": true,
         "fasterer": true
     },
-    "editor.fontFamily": "Source Code Pro for Powerline",
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
     "editor.insertSpaces": true,
     "editor.tabSize": 2,
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "window.zoomLevel": 1,
+    "window.title": "${activeEditorMedium}${separator}${rootName}",
+    "eslint.autoFixOnSave": true,
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.includeLanguages": {
+        "erb": "html"
+    }
 }
